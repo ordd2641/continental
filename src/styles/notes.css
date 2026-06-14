@@ -1,0 +1,10 @@
+
+.note-card{
+ width:280px;padding:14px;background:#ead7a0;color:#2a1d12;
+ box-shadow:0 4px 12px rgba(0,0,0,.3);position:relative;border-radius:4px;
+}
+.pin{
+ width:14px;height:14px;border-radius:50%;background:#8b0000;
+ position:absolute;top:-6px;left:50%;transform:translateX(-50%);
+}
+.important{font-weight:bold;color:#8b0000;margin-bottom:6px;}

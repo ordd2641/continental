@@ -1,17 +1,11 @@
 import { useState } from "react";
 import { USERS } from "../data/users";
 
-export default function Login({
-  onLogin
-}) {
-  const [password, setPassword] =
-    useState("");
+export default function Login({ onLogin }) {
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-
-    const user = Object.entries(
-      USERS
-    ).find(
+    const user = Object.entries(USERS).find(
       ([, pass]) => pass === password
     );
 
@@ -30,32 +24,22 @@ export default function Login({
 
   return (
     <div className="login-screen">
-
       <div className="login-card">
-
-        <h1>
-          Салун Континенталь
-        </h1>
+        <h1>Салун Континенталь</h1>
 
         <input
           type="password"
           placeholder="Пароль"
           value={password}
           onChange={(e) =>
-            setPassword(
-              e.target.value
-            )
+            setPassword(e.target.value)
           }
         />
 
-        <button
-          onClick={handleLogin}
-        >
+        <button onClick={handleLogin}>
           Войти
         </button>
-
       </div>
-
     </div>
   );
 }
