@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #231b16;
+  color: #f2e6c9;
+  font-family: Georgia, serif;
+}
