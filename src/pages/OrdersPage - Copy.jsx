@@ -8,8 +8,6 @@ export default function OrdersPage() {
   const [custom,setCustom]=useState({});
   const [orders,setOrders]=useState([]);
 
-  const user = localStorage.getItem("continentalUser") || "Unknown";
-
   useEffect(()=>subscribeInventory(setInventory),[]);
   useEffect(()=>subscribeOrders(setOrders),[]);
 
@@ -22,7 +20,7 @@ export default function OrdersPage() {
   const createNewOrder=async()=>{
     const items=Object.entries(cart);
     if(!items.length) return;
-    await createOrder(items,user);
+    await createOrder(items,"Arthur");
     setCart({});
   };
 
@@ -30,15 +28,10 @@ export default function OrdersPage() {
     for(const itemOrder of order.items){
       const item=inventory.find(i=>i.name===itemOrder.name);
       if(item){
-        await changeQty(item.id,itemOrder.qty,user);
+        await changeQty(item.id,itemOrder.qty,"Заказ поставки");
       }
     }
-
-    await removeOrder(
-      order.id,
-      order.orderNumber,
-      user
-    );
+    await removeOrder(order.id);
   };
 
   const copyOrder=(order)=>{
@@ -108,10 +101,10 @@ export default function OrdersPage() {
             <button onClick={async()=>{
               if(window.confirm(`Удалить заказ #${order.orderNumber || "?"}?`)){
                 await removeOrder(
-                  order.id,
-                  order.orderNumber,
-                  user
-                );
+  order.id,
+  order.orderNumber,
+  "Arthur"
+);
               }
             }}>✕</button>
           </div>

@@ -8,7 +8,11 @@ export const foodRecipes = [
 {id:"stew",name:"Рагу Старый Запад",output:2,ingredients:[{name:"Говядина",qty:1},{name:"Дикая морковь",qty:2},{name:"Соль",qty:1},{name:"Гриб-зонтик",qty:2},{name:"Капуста",qty:1},{name:"Редис",qty:1}]},
 {id:"cherokee",name:"Суп чероки",output:4,ingredients:[{name:"Вода",qty:1},{name:"Дикая морковь",qty:1},{name:"Душница",qty:1},{name:"Картофель",qty:2},{name:"Кукуруза",qty:1},{name:"Оленина",qty:1},{name:"Ползучий тимьян",qty:1},{name:"Соль",qty:1}]},
 {id:"app",name:"Тушеное мясо по-апалачски",output:3,ingredients:[{name:"Вода",qty:1},{name:"Дикая морковь",qty:1},{name:"Дикий чеснок",qty:1},{name:"Кукуруза",qty:2},{name:"Оленина",qty:1},{name:"Ползучий тимьян",qty:1},{name:"Соль",qty:1}]},
-{id:"chicken",name:"Цыпленок табака",output:2,ingredients:[{name:"Вода",qty:1},{name:"Дикая морковь",qty:1},{name:"Душница",qty:2},{name:"Мясо птицы",qty:1}]}
+{id:"chicken",name:"Цыпленок табака",output:2,ingredients:[{name:"Вода",qty:1},{name:"Дикая морковь",qty:1},{name:"Душница",qty:2},{name:"Мясо птицы",qty:1}]},
+{id:"ginseng",name:"Чай из женьшеня",output:1,ingredients:[{name:"Вода",qty:1},{name:"Американский женьшень",qty:1},{name:"Сахар",qty:1}]},
+{id:"puer",name:"Чай пузэр",output:1,ingredients:[{name:"Вода",qty:1},{name:"Американский женьшень",qty:3},{name:"Сахар",qty:3}]},
+{id:"compote",name:"Черничный компот",output:1,ingredients:[{name:"Вода",qty:1},{name:"Груша",qty:1},{name:"Сахар",qty:2},{name:"Черника",qty:2}]},
+{id:"strudel",name:"Штрудель",output:1,ingredients:[{name:"Молоко",qty:1},{name:"Мука",qty:1},{name:"Сахар",qty:1},{name:"Яблоко",qty:2},{name:"Яйцо",qty:1}]}
 ];
 export const alcoholRecipes=[
 {id:"absinthe",name:"Абсент",output:1,ingredients:[{name:"Вода",qty:1},{name:"Агава",qty:2},{name:"Алоэ",qty:2},{name:"Дикая мята",qty:4},{name:"Спирт",qty:1}]},
@@ -18,5 +22,24 @@ export const alcoholRecipes=[
 {id:"vodka",name:"Водка Бутчерс-Крик",output:1,ingredients:[{name:"Вода",qty:1},{name:"Спирт",qty:1},{name:"Тысячелистник",qty:3},{name:"Хмель",qty:4}]},
 {id:"wine",name:"Красное вино",output:1,ingredients:[{name:"Виноград",qty:2},{name:"Спирт",qty:1}]},
 {id:"rum",name:"Ром",output:1,ingredients:[{name:"Вода",qty:1},{name:"Сахар",qty:2},{name:"Спирт",qty:1}]},
-{id:"spirit",name:"Спирт",output:1,ingredients:[{name:"Вода",qty:1},{name:"Кукуруза",qty:2},{name:"Сахар",qty:2},{name:"Хмель",qty:3}]}
+{id:"spirit",name:"Спирт",output:1,ingredients:[{name:"Вода",qty:1},{name:"Кукуруза",qty:2},{name:"Сахар",qty:2},{name:"Хмель",qty:3}]},
+{id:"mulled",name:"Глинтвейн",output:1,ingredients:[{name:"Виноград",qty:1},{name:"Дикая мята",qty:2},{name:"Спирт",qty:1},{name:"Черника",qty:1}]},
+{id:"warmer",name:"Грелка для кишечника",output:1,ingredients:[{name:"Вода",qty:1},{name:"Молочай",qty:1},{name:"Спирт",qty:1},{name:"Хмель",qty:4}]},
+{id:"wildshine",name:"Дикий первач",output:1,ingredients:[{name:"Вода",qty:1},{name:"Картофель",qty:3},{name:"Сахар",qty:3},{name:"Спирт",qty:1}]},
+{id:"homemade",name:"Домашний душок",output:1,ingredients:[{name:"Вода",qty:1},{name:"Змеиная ягода",qty:5},{name:"Сахар",qty:3},{name:"Спирт",qty:1}]},
+{id:"snakewine",name:"Змеиное вино",output:1,ingredients:[{name:"Вода",qty:1},{name:"Виноград",qty:1},{name:"Змеиный яд",qty:1},{name:"Спирт",qty:1}]},
+{id:"farmerheat",name:"Крестьянский жар",output:1,ingredients:[{name:"Вода",qty:1},{name:"Груша",qty:6},{name:"Сахар",qty:3},{name:"Спирт",qty:1}]},
+{id:"ratbrew",name:"Крысиная настойка",output:1,ingredients:[{name:"Стеклянная бутылка",qty:1},{name:"Бытовой хлам",qty:2},{name:"Кровавый цветок",qty:1},{name:"Крыса",qty:1},{name:"Спирт",qty:1}]},
+{id:"cornshine",name:"Кукурузный самогон",output:1,ingredients:[{name:"Вода",qty:1},{name:"Кукуруза",qty:5},{name:"Сахар",qty:4},{name:"Спирт",qty:1}]},
+{id:"moonlight",name:"Лунный огонек",output:1,ingredients:[{name:"Вода",qty:1},{name:"Американский женьшень",qty:5},{name:"Сахар",qty:3},{name:"Спирт",qty:1}]},
+{id:"nightelixir",name:"Ночной эликсир",output:1,ingredients:[{name:"Вода",qty:1},{name:"Дикая мята",qty:4},{name:"Сахар",qty:4},{name:"Спирт",qty:1}]},
+{id:"firemash",name:"Огненная бражка",output:1,ingredients:[{name:"Вода",qty:1},{name:"Агава",qty:4},{name:"Сахар",qty:4},{name:"Спирт",qty:1}]},
+{id:"peachshine",name:"Персиковый самогон",output:1,ingredients:[{name:"Вода",qty:1},{name:"Персик",qty:5},{name:"Сахар",qty:4},{name:"Спирт",qty:1}]},
+{id:"farmshine",name:"Сельский блеск",output:1,ingredients:[{name:"Вода",qty:1},{name:"Пшеница",qty:4},{name:"Сахар",qty:4},{name:"Спирт",qty:1}]},
+{id:"secretbrew",name:"Тайная бражка",output:1,ingredients:[{name:"Вода",qty:1},{name:"Сахар",qty:3},{name:"Спирт",qty:1},{name:"Чок Дейзи",qty:3}]},
+{id:"tequila",name:"Текила Дон Хулио",output:1,ingredients:[{name:"Виноград",qty:1},{name:"Дикая мята",qty:2},{name:"Спирт",qty:1},{name:"Черника",qty:1}]},
+{id:"farmercache",name:"Фермерский тайник",output:1,ingredients:[{name:"Вода",qty:1},{name:"Алоэ",qty:5},{name:"Сахар",qty:4},{name:"Спирт",qty:1}]},
+{id:"blueberryshine",name:"Черничный самогон",output:1,ingredients:[{name:"Вода",qty:1},{name:"Сахар",qty:4},{name:"Спирт",qty:1},{name:"Черника",qty:5}]},
+{id:"cannabis",name:"Эйфория каннабис",output:1,ingredients:[{name:"Яблоко",qty:1},{name:"Дикая мята",qty:1},{name:"Листья каннабиса",qty:2},{name:"Ползучий тимьян",qty:1},{name:"Спирт",qty:1}]},
+{id:"appleshine",name:"Яблочный самогон",output:1,ingredients:[{name:"Вода",qty:1},{name:"Сахар",qty:4},{name:"Спирт",qty:1},{name:"Яблоко",qty:5}]}
 ];
