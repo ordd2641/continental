@@ -61,7 +61,7 @@ export default function InventoryPage({user}){
       <div style={{fontWeight:"bold"}}>
         {item.name}
       </div>
-      <div style={{fontSize:"11px",marginTop:"2px",fontWeight:600,color:perishableMap[item.name]?"#b55a5a":"#5f9d5f"}}>{perishableMap[item.name] ? "Портится" : "Не портится"}</div>
+      <div style={{fontSize:"11px",opacity:.75,marginTop:"2px"}}>{perishableMap[item.name] ? "Портится" : "Не портится"}</div>
 
       <div
         style={{

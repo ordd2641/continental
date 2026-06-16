@@ -35,10 +35,10 @@ export async function undoLastCraft(user){
 }
 
 export async function saveRecipeRating(recipeId,recipeName,user,rating){
- await setDoc(doc(db,"recipeRatings",recipeId),{
-  recipeId,recipeName,rating
+ await setDoc(doc(db,"recipeRatings",`${recipeId}_${user}`),{
+  recipeId,user,rating
  });
- await addLog(user,`Изменил рейтинг блюда ${recipeName}: ${rating}★`);
+ await addLog(user,`Поставил ${rating}★ для ${recipeName}`);
 }
 
 export function subscribeRecipeRatings(cb){

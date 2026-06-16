@@ -18,8 +18,8 @@ export default function NoteForm({ user, onCreate, onCancel }) {
         Важное
       </label>
       <br/>
-      <button onClick={()=>onCreate({title,text,author:user,important})} style={{display:"block",marginTop:"12px"}}>Оставить заметку на доске</button>
-      <button onClick={onCancel} style={{marginLeft:"6px"}}>Отмена</button>
+      <button onClick={()=>onCreate({title,text,author:user,important})}>Прикрепить</button>
+      <button onClick={onCancel}>Отмена</button>
     </div>
   );
 }

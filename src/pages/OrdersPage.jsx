@@ -49,11 +49,11 @@ export default function OrdersPage() {
   return (
     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:"16px"}}>
       <div>
-        <h3>Склад</h3>
+        <h3 style={{marginBottom:"12px"}}>Склад</h3>
         {inventory.map(i=>(
-          <div key={i.id}>
+          <div key={i.id} style={{marginBottom:"10px",fontSize:"13px"}}>
             {i.name} ({i.quantity})
-            <div>
+            <div style={{display:"flex",gap:"4px",marginTop:"4px",alignItems:"center"}}>
               <button onClick={()=>addItem(i.name,10)}>10</button>
               <button onClick={()=>addItem(i.name,50)}>50</button>
               <button onClick={()=>addItem(i.name,100)}>100</button>
@@ -83,7 +83,7 @@ export default function OrdersPage() {
               const c={...cart};
               delete c[name];
               setCart(c);
-            }}>✕</button>
+            }} style={{padding:"2px 8px",fontSize:"12px"}}>✕</button>
           </div>
         ))}
 
@@ -96,15 +96,15 @@ export default function OrdersPage() {
         <h3>Ожидают доставки</h3>
 
         {orders.map(order=>(
-          <div key={order.id} style={{border:"1px solid #666",padding:"8px",marginBottom:"8px"}}>
+          <div key={order.id} style={{border:"1px solid #666",padding:"8px",marginBottom:"8px",fontSize:"13px"}}>
             <b>Заказ #{order.orderNumber || "?"}</b>
 
             {order.items?.map(i=>(
-              <div key={i.name}>{i.name} x{i.qty}</div>
+              <div key={i.name} style={{lineHeight:"1.7"}}>{i.name} x{i.qty}</div>
             ))}
 
-            <button onClick={()=>copyOrder(order)}>Скопировать</button>
-            <button onClick={()=>markDelivered(order)}>Доставлено</button>
+            <button onClick={()=>copyOrder(order)} style={{padding:"2px 8px",fontSize:"12px",marginRight:"6px"}}>Скопировать</button>
+            <button onClick={()=>markDelivered(order)} style={{padding:"2px 8px",fontSize:"12px",marginRight:"6px"}}>Доставлено</button>
             <button onClick={async()=>{
               if(window.confirm(`Удалить заказ #${order.orderNumber || "?"}?`)){
                 await removeOrder(
@@ -113,7 +113,7 @@ export default function OrdersPage() {
                   user
                 );
               }
-            }}>✕</button>
+            }} style={{padding:"2px 8px",fontSize:"12px"}}>✕</button>
           </div>
         ))}
       </div>

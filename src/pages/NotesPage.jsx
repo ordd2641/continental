@@ -15,7 +15,15 @@ export default function NotesPage({ user }) {
 
  return <div>
  <input placeholder="Поиск заметок" value={search} onChange={e=>setSearch(e.target.value)}/>
- <button onClick={()=>setShowForm(!showForm)}>Оставить заметку</button>
+ <button
+  onClick={()=>setShowForm(!showForm)}
+  style={{
+    display:"block",
+    marginTop:"10px"
+  }}
+>
+  Оставить заметку на доске
+</button>
  {showForm && <NoteForm user={user} onCancel={()=>setShowForm(false)} onCreate={async(note)=>{
  await createNote(note);
  await addLog(user,`Создал заметку: ${note.title}${note.important?' (важная)':''}`);
